@@ -21,4 +21,7 @@ app.use(cors());
 app.use(routes);
 
 // disponibilização da imagen no fron-end
-app.use(express.static(path.resolve(__dirname, "uploads", "upload")));
+app.use(
+	"/api/images/",
+	express.static(path.resolve(__dirname, "uploads", "upload"))
+);
