@@ -18,6 +18,7 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 app.use(cookieParser());
 app.use(cors());
+app.use(routes);
 
 // disponibilização da imagen no fron-end
 app.use(express.static(path.resolve(__dirname, "uploads", "upload")));
