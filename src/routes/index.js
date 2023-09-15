@@ -5,7 +5,7 @@ const routes = express.Router();
 const Comments = require("../models/Comments");
 const Moments = require("../models/Moments");
 
-const upload = require("../uploads/config/");
+const upload = require("../uploads/config");
 
 routes.get("/", (req, res) =>
 	res.json({ hello: "world", message: "API REST iniciada" })
