@@ -5,8 +5,8 @@
 	"main": "functions/src/index.js",
 	"scripts": {
 		"test": "echo \"Error: no test specified\" && exit 1",
-		"build": "tsup functions/src",
-		"start": "node dist/index.js"
+		"start": "node dist/index.js",
+		"build": "tsup functions/src"
 	},
 	"keywords": [],
 	"author": "",
@@ -26,7 +26,6 @@
 		"sequelize": "^6.28.0",
 		"sequelize-cli": "^6.5.2",
 		"serverless-http": "^3.1.1",
-		"tsup": "^7.2.0",
 		"yarn": "^1.22.19"
 	}
 }
