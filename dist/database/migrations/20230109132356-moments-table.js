@@ -1,6 +1,6 @@
 "use strict";
 
-// functions/src/database/migrations/20230109132356-moments-table.js
+// src/database/migrations/20230109132356-moments-table.js
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.createTable("moments", {

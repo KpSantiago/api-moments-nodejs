@@ -1,4 +1,4 @@
-// functions/src/models/Comments.js
+// src/models/Comments.js
 var { DataTypes, Model } = require("sequelize");
 var Comments = class extends Model {
   static init(sequelize) {

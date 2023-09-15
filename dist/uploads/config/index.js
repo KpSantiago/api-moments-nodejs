@@ -1,4 +1,4 @@
-// functions/src/uploads/config/index.js
+// src/uploads/config/index.js
 var multer = require("multer");
 module.exports = multer({
   storage: multer.diskStorage({

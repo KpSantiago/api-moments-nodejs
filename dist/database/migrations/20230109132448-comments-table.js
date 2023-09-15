@@ -1,6 +1,6 @@
 "use strict";
 
-// functions/src/database/migrations/20230109132448-comments-table.js
+// src/database/migrations/20230109132448-comments-table.js
 module.exports = {
   async up(queryInterface, Sequelize) {
     return queryInterface.createTable("comments", {

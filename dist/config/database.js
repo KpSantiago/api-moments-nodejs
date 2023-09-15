@@ -1,4 +1,4 @@
-// functions/src/config/database.js
+// src/config/database.js
 module.exports = {
   database: "verceldb",
   username: "default",

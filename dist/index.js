@@ -3,9 +3,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// functions/src/models/Comments.js
+// src/models/Comments.js
 var require_Comments = __commonJS({
-  "functions/src/models/Comments.js"(exports, module2) {
+  "src/models/Comments.js"(exports, module2) {
     var { DataTypes, Model } = require("sequelize");
     var Comments = class extends Model {
       static init(sequelize) {
@@ -31,9 +31,9 @@ var require_Comments = __commonJS({
   }
 });
 
-// functions/src/models/Moments.js
+// src/models/Moments.js
 var require_Moments = __commonJS({
-  "functions/src/models/Moments.js"(exports, module2) {
+  "src/models/Moments.js"(exports, module2) {
     var { DataTypes, Model } = require("sequelize");
     var Moments = class extends Model {
       static init(sequelize) {
@@ -61,9 +61,9 @@ var require_Moments = __commonJS({
   }
 });
 
-// functions/src/uploads/config/index.js
+// src/uploads/config/index.js
 var require_config = __commonJS({
-  "functions/src/uploads/config/index.js"(exports, module2) {
+  "src/uploads/config/index.js"(exports, module2) {
     var multer = require("multer");
     module2.exports = multer({
       storage: multer.diskStorage({
@@ -90,9 +90,9 @@ var require_config = __commonJS({
   }
 });
 
-// functions/src/routes/index.js
+// src/routes/index.js
 var require_routes = __commonJS({
-  "functions/src/routes/index.js"(exports, module2) {
+  "src/routes/index.js"(exports, module2) {
     var express2 = require("express");
     var routes2 = express2.Router();
     var Comments = require_Comments();
@@ -259,9 +259,9 @@ var require_routes = __commonJS({
   }
 });
 
-// functions/src/config/database.js
+// src/config/database.js
 var require_database = __commonJS({
-  "functions/src/config/database.js"(exports, module2) {
+  "src/config/database.js"(exports, module2) {
     module2.exports = {
       database: "verceldb",
       username: "default",
@@ -274,9 +274,9 @@ var require_database = __commonJS({
   }
 });
 
-// functions/src/database/index.js
+// src/database/index.js
 var require_database2 = __commonJS({
-  "functions/src/database/index.js"(exports, module2) {
+  "src/database/index.js"(exports, module2) {
     var Sequelize = require("sequelize");
     var databaseConfig = require_database();
     var Comments = require_Comments();
@@ -290,7 +290,7 @@ var require_database2 = __commonJS({
   }
 });
 
-// functions/src/index.js
+// src/index.js
 var express = require("express");
 var cookieParser = require("cookie-parser");
 var cors = require("cors");

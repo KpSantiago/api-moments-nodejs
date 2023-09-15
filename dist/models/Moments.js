@@ -1,4 +1,4 @@
-// functions/src/models/Moments.js
+// src/models/Moments.js
 var { DataTypes, Model } = require("sequelize");
 var Moments = class extends Model {
   static init(sequelize) {

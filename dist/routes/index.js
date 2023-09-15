@@ -3,9 +3,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// functions/src/models/Comments.js
+// src/models/Comments.js
 var require_Comments = __commonJS({
-  "functions/src/models/Comments.js"(exports2, module2) {
+  "src/models/Comments.js"(exports2, module2) {
     var { DataTypes, Model } = require("sequelize");
     var Comments2 = class extends Model {
       static init(sequelize) {
@@ -31,9 +31,9 @@ var require_Comments = __commonJS({
   }
 });
 
-// functions/src/models/Moments.js
+// src/models/Moments.js
 var require_Moments = __commonJS({
-  "functions/src/models/Moments.js"(exports2, module2) {
+  "src/models/Moments.js"(exports2, module2) {
     var { DataTypes, Model } = require("sequelize");
     var Moments2 = class extends Model {
       static init(sequelize) {
@@ -61,9 +61,9 @@ var require_Moments = __commonJS({
   }
 });
 
-// functions/src/uploads/config/index.js
+// src/uploads/config/index.js
 var require_config = __commonJS({
-  "functions/src/uploads/config/index.js"(exports2, module2) {
+  "src/uploads/config/index.js"(exports2, module2) {
     var multer = require("multer");
     module2.exports = multer({
       storage: multer.diskStorage({
@@ -90,7 +90,7 @@ var require_config = __commonJS({
   }
 });
 
-// functions/src/routes/index.js
+// src/routes/index.js
 var express = require("express");
 var routes = express.Router();
 var Comments = require_Comments();

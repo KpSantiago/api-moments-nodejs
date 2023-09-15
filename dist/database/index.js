@@ -3,9 +3,9 @@ var __commonJS = (cb, mod) => function __require() {
   return mod || (0, cb[__getOwnPropNames(cb)[0]])((mod = { exports: {} }).exports, mod), mod.exports;
 };
 
-// functions/src/config/database.js
+// src/config/database.js
 var require_database = __commonJS({
-  "functions/src/config/database.js"(exports2, module2) {
+  "src/config/database.js"(exports2, module2) {
     module2.exports = {
       database: "verceldb",
       username: "default",
@@ -18,9 +18,9 @@ var require_database = __commonJS({
   }
 });
 
-// functions/src/models/Comments.js
+// src/models/Comments.js
 var require_Comments = __commonJS({
-  "functions/src/models/Comments.js"(exports2, module2) {
+  "src/models/Comments.js"(exports2, module2) {
     var { DataTypes, Model } = require("sequelize");
     var Comments2 = class extends Model {
       static init(sequelize) {
@@ -46,9 +46,9 @@ var require_Comments = __commonJS({
   }
 });
 
-// functions/src/models/Moments.js
+// src/models/Moments.js
 var require_Moments = __commonJS({
-  "functions/src/models/Moments.js"(exports2, module2) {
+  "src/models/Moments.js"(exports2, module2) {
     var { DataTypes, Model } = require("sequelize");
     var Moments2 = class extends Model {
       static init(sequelize) {
@@ -76,7 +76,7 @@ var require_Moments = __commonJS({
   }
 });
 
-// functions/src/database/index.js
+// src/database/index.js
 var Sequelize = require("sequelize");
 var databaseConfig = require_database();
 var Comments = require_Comments();
