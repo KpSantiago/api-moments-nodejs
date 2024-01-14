@@ -100,15 +100,17 @@ routes.delete("/api/moments/:id", async (req, res) => {
 });
 
 routes.put("/api/moments/:id", upload.single("image"), async (req, res) => {
-	try {
-		const { id } = req.params;
-		const { title, description } = req.body;
+	const { id } = req.params;
+	const { title, description } = req.body;
 
+	try {
+
+		const moment = await Moments.findAll({ where: { id } })
 		const moments = await Moments.update(
 			{
 				title,
 				description,
-				image: req.file.filename,
+				image: req.file.filename ? req.file.filename : moment[0].image,
 			},
 			{
 				where: {
