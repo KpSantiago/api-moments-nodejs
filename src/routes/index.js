@@ -16,7 +16,7 @@ routes.get("/", (req, res) =>
 routes.get("/api/moments", upload.array("image"), async (req, res) => {
 	try {
 		const moments = await Moments.findAll({
-			include: { association: "comments" },
+			include: [{ model: Comments, as: "comments" }]
 		});
 
 		return res.status(200).json({
@@ -36,7 +36,7 @@ routes.get("/api/moments/:id", async (req, res) => {
 		const { id } = req.params;
 
 		const moments = await Moments.findOne({
-			include: { association: "comments" },
+			include: [{ model: Comments, as: "comments" }],
 
 			where: {
 				id,
@@ -56,14 +56,13 @@ routes.get("/api/moments/:id", async (req, res) => {
 });
 
 routes.post("/api/moments", upload.single("image"), async (req, res) => {
-	try {
-		const { title, description, updated_at } = req.body;
+	const { title, description } = req.body;
 
+	try {
 		const moments = await Moments.create({
 			title: title,
 			description: description,
 			image: req.file.filename,
-			updated_at,
 		});
 
 		return res.status(200).json({
@@ -153,9 +152,9 @@ routes.get("/api/:moment_id/comments", async (req, res) => {
 });
 
 routes.post("/api/comments", async (req, res) => {
-	try {
-		const { username, text, moment_id } = req.body;
+	const { username, text, moment_id } = req.body;
 
+	try {
 		const comments = await Comments.create({
 			username,
 			moment_id,
